@@ -5,3 +5,5 @@ The relevant model equations, parameters and analysis can be found in the associ
 Authors: Tapan Goel, Ellen Adams, April Bialas, Cassidy M. Tran, Trevor Rowe, Sara Martin, Maia Chandler, Johanna Schubert, Patrick H. Diamond and Eva-Maria S. Collins*
 
 *Corresponding Author.
+
+[![DOI](https://zenodo.org/badge/461057095.svg)](https://zenodo.org/badge/latestdoi/461057095)
