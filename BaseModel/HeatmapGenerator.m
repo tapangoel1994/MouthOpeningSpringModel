@@ -32,7 +32,6 @@ Results = array2table(Results,'VariableNames',{'Force', 'Tau', 'Gamma', 'Iter',.
 % ylabel('Forcing Rate(Hz)');
 % zlabel('Non-linearCoefficient');
 % title('Control Model')
-
 Results(Results.flag < 0,:) = []; %Remove datasets where a) the max mouth area is > 1.2*(Area of outer ring) OR b) OpeningTime < dt*10 = 0.05s OR if there are less than 50 datapoints in the area time series.
 Results.COV = Results.StdRadius./Results.MeanRadius; %define delta_r/r
 

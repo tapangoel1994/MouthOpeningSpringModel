@@ -33,7 +33,7 @@ Results = array2table(Results,'VariableNames',{'Force', 'Tau', 'Gamma', 'Iter',.
 % zlabel('Non-linearCoefficient');
 % title('Control Model')
 
-Results(Results.flag < 0,:) = []; %Remove datasets where a) the max mouth area is > 1.2*(Area of outer ring) OR b) OpeningTime < dt*10 = 0.05s OR if there are less than 50 datapoints in the area time series.
+%Results(Results.flag < 0,:) = []; %Remove datasets where a) the max mouth area is > 1.2*(Area of outer ring) OR b) OpeningTime < dt*10 = 0.05s OR if there are less than 50 datapoints in the area time series.
 Results.COV = Results.StdRadius./Results.MeanRadius; %define delta_r/r
 
 %% Take ensamble average
@@ -61,7 +61,7 @@ t = tiledlayout(3,3)
 nexttile(1);
 g1 = heatmap(avgresults(highl0,:),'Force','Tau','ColorVariable',"mean_MaxArea");
 g1.GridVisible = 'off';
-g1.ColorLimits = [282 1500];
+g1.ColorLimits = [282 15000];
 g1.YDisplayLabels = -ratelabels;
 g1.XDisplayLabels = forcelabels;
 g1.XLabel = '';
@@ -71,7 +71,7 @@ g1.Title = 'l0 = \infty';
 nexttile(4);
 g1 = heatmap(avgresults(midl0,:),'Force','Tau','ColorVariable',"mean_MaxArea");
 g1.GridVisible = 'off';
-g1.ColorLimits = [282 1500];
+g1.ColorLimits = [282 15000];
 g1.YDisplayLabels = -ratelabels;
 g1.XDisplayLabels = forcelabels;
 g1.XLabel = '';
@@ -81,7 +81,7 @@ g1.Title = 'l0 = 30 um';
 nexttile(7);
 g1 = heatmap(avgresults(lowl0,:),'Force','Tau','ColorVariable',"mean_MaxArea");
 g1.GridVisible = 'off';
-g1.ColorLimits = [282 1500];
+g1.ColorLimits = [282 15000];
 g1.YDisplayLabels = -ratelabels;
 g1.XDisplayLabels = forcelabels;
 g1.XLabel = '';

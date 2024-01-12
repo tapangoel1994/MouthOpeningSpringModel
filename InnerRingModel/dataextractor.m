@@ -5,7 +5,7 @@
 %%Flag outputs the following depending on the criteria:
 %%If MaxArea > 1.2*(Area of outer ring), flag = -1, Hard condition
 %%If MaxArea < 1.05*(Initial Mouth Area), flag = 0, Soft condition
-%%If OpeningTime < dt*10 = 0.05s, flag = -2, Hard condition
+%%If OpeningTime < 0.05s, flag = -2, Hard condition
 %%If OpeningTime > 2*T, flag = 1, Soft Condition
 %%If EllipseFit reports NaN (cannot fit), flag = 3, Soft/Hard Condition
 %%For all else, flag = 2: Non pathalogical cases
@@ -52,7 +52,7 @@ y = y(:);
 MaxAreaUpperLimit = 1.2*polyarea(x,y);
 
 % Upper and lower limits for time of opening
-OpeningTimeLowerLimit = 10*(time(2)-time(1));
+OpeningTimeLowerLimit = .05;
 OpeningTimeUpperLimit = time(end)*2;
 
 %% Obtain Min, Max area and OpeningTime for sim.
@@ -95,7 +95,7 @@ if(length(yData)>50) %there are atleast 50 datapoints on the curve.
         %%Flag outputs the following depending on the criteria:
         %%If MaxArea > 1.2*(Area of outer ring), flag = -1, Hard condition
         %%If MaxArea < 1.05*(Initial Mouth Area), flag = 0, Soft condition
-        %%If OpeningTime < dt*10 = 0.05, flag = -2, Hard condition
+        %%If OpeningTime < 0.05, flag = -2, Hard condition
         %%If OpeningTime > 2*T, flag = 1, Soft Condition
         %%If EllipseFit reports NaN (cannot fit), flag = 3, Soft/Hard Condition
         %%For all else, flag = 2: Non pathalogical cases
