@@ -6,4 +6,4 @@ Authors: Tapan Goel, Ellen Adams, April Bialas, Cassidy M. Tran, Trevor Rowe, Sa
 
 *Corresponding Author.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7898027.svg)](https://doi.org/10.5281/zenodo.7898027)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10498855.svg)](https://doi.org/10.5281/zenodo.10498855)
